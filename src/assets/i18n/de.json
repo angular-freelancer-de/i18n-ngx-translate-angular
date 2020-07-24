@@ -1,0 +1,7 @@
+{
+  "HELLO_WORLD": {
+    "TITLE": "i18n mit ngx-translate",
+    "GREETING": "Hallo Welt",
+    "CHOOSE": "Wählen Sie eine Sprache"
+  }
+}
