@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   }
 
   private selectLanguageByCode(languageCode: string): void {
-    this.translateService.use(this.isLanguageCodeSupported(languageCode) ? languageCode : 'de');
+    this.translateService.use(this.isLanguageCodeSupported(languageCode) ? languageCode : this.translateService.getDefaultLang());    
   }
  
   public get currentLanguageCode(): string {
