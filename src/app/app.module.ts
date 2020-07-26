@@ -5,9 +5,16 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
+import { NgxDatePipe } from "./pipes/ngx-date.pipe";
+import { registerLocaleData } from '@angular/common';
+import localeDe from "@angular/common/locales/de"
+import localeEn from "@angular/common/locales/en"
+
+registerLocaleData(localeDe);
+registerLocaleData(localeEn);
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NgxDatePipe],
   imports: [
     FormsModule,
     BrowserModule,
@@ -20,7 +27,9 @@ import { FormsModule } from "@angular/forms";
       }
     })
   ],
-  providers: [],
+  providers: [
+    NgxDatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
